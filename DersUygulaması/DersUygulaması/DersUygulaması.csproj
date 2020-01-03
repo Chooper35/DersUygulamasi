@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" />
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7C1314B-502D-44B0-B1BF-FF4F9F1F2639}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DersUygulaması</RootNamespace>
+    <AssemblyName>DersUygulaması</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data Access\ClassProjectDBContext.cs" />
+    <Compile Include="DenemeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DenemeForm.Designer.cs">
+      <DependentUpon>DenemeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Concrete\Konu.cs" />
+    <Compile Include="Data Access\KonuDal.cs" />
+    <Compile Include="Formlar\KonuEkranı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\KonuEkranı.Designer.cs">
+      <DependentUpon>KonuEkranı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Concrete\Soru.cs" />
+    <Compile Include="Data Access\SoruDal.cs" />
+    <Compile Include="Concrete\TestClass.cs" />
+    <Compile Include="Data Access\TestDal.cs" />
+    <Compile Include="Formlar\TestEkranı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\TestEkranı.Designer.cs">
+      <DependentUpon>TestEkranı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\TestLiset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\TestLiset.Designer.cs">
+      <DependentUpon>TestLiset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\ÖgrenciGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\ÖgrenciGiris.Designer.cs">
+      <DependentUpon>ÖgrenciGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\ÖgrenciKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\ÖgrenciKayit.Designer.cs">
+      <DependentUpon>ÖgrenciKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data Access\ÖgretmenDal.cs" />
+    <Compile Include="Formlar\ÖgretmenSoruEkleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\ÖgretmenSoruEkleme.Designer.cs">
+      <DependentUpon>ÖgretmenSoruEkleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Concrete\Öğrenci.cs" />
+    <Compile Include="Formlar\ÖğrenciBilgiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\ÖğrenciBilgiler.Designer.cs">
+      <DependentUpon>ÖğrenciBilgiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data Access\ÖğrenciDal.cs" />
+    <Compile Include="Formlar\ÖğrenciSecim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\ÖğrenciSecim.Designer.cs">
+      <DependentUpon>ÖğrenciSecim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Concrete\Öğretmen.cs" />
+    <Compile Include="Formlar\ÖğretmenBilgiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\ÖğretmenBilgiler.Designer.cs">
+      <DependentUpon>ÖğretmenBilgiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\ÖğretmenGiriş.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\ÖğretmenGiriş.Designer.cs">
+      <DependentUpon>ÖğretmenGiriş.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\ÖğretmenKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\ÖğretmenKayit.Designer.cs">
+      <DependentUpon>ÖğretmenKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\ÖğretmenSecim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\ÖğretmenSecim.Designer.cs">
+      <DependentUpon>ÖğretmenSecim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\İstatistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\İstatistik.Designer.cs">
+      <DependentUpon>İstatistik.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DenemeForm.resx">
+      <DependentUpon>DenemeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\KonuEkranı.resx">
+      <DependentUpon>KonuEkranı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Formlar\TestEkranı.resx">
+      <DependentUpon>TestEkranı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\TestLiset.resx">
+      <DependentUpon>TestLiset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\ÖgrenciGiris.resx">
+      <DependentUpon>ÖgrenciGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\ÖgrenciKayit.resx">
+      <DependentUpon>ÖgrenciKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\ÖgretmenSoruEkleme.resx">
+      <DependentUpon>ÖgretmenSoruEkleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\ÖğrenciBilgiler.resx">
+      <DependentUpon>ÖğrenciBilgiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\ÖğrenciSecim.resx">
+      <DependentUpon>ÖğrenciSecim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\ÖğretmenBilgiler.resx">
+      <DependentUpon>ÖğretmenBilgiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\ÖğretmenGiriş.resx">
+      <DependentUpon>ÖğretmenGiriş.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\ÖğretmenKayit.resx">
+      <DependentUpon>ÖğretmenKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\ÖğretmenSecim.resx">
+      <DependentUpon>ÖğretmenSecim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\İstatistik.resx">
+      <DependentUpon>İstatistik.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Formlar\MetroFramework.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.12.0\build\NUnit.props'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+</Project>

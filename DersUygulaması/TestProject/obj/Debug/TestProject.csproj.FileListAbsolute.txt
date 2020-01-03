@@ -1,0 +1,2 @@
+C:\Users\LENOVO\source\repos\DersUygulaması\TestProject\obj\Debug\TestProject.csprojAssemblyReference.cache
+C:\Users\LENOVO\source\repos\DersUygulaması\TestProject\obj\Debug\TestProject.csproj.CoreCompileInputs.cache
