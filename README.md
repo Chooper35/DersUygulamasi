@@ -8,6 +8,7 @@
 ![TestEkranı](https://user-images.githubusercontent.com/37003658/72996627-18832900-3e0c-11ea-956c-105097027e63.png)
 ![KonularEkranı](https://user-images.githubusercontent.com/37003658/72996630-19b45600-3e0c-11ea-998e-1bf305b8569b.png)
 ![Test](https://user-images.githubusercontent.com/37003658/74443821-e140ee80-4e84-11ea-8bb5-5a22d60d7c4c.png)
+![TestYanliscevapp](https://user-images.githubusercontent.com/37003658/74445299-3847c300-4e87-11ea-921a-cbf8f65b6cd7.png)
 
 ![İstatistikKonuKartezyens](https://user-images.githubusercontent.com/37003658/72996639-1c16b000-3e0c-11ea-9aa2-6e435a76ab3c.png)
 ![İstatistikKonu](https://user-images.githubusercontent.com/37003658/72996651-1faa3700-3e0c-11ea-8a24-708fbf09bbf6.png)
